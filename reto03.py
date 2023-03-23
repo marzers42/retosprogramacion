@@ -31,51 +31,31 @@ especiales = '!@#$%&/()=?*¨[]'
 
 alfabeto = letras_min + letas_mayus + numeros + especiales
 
-
+print("la seleccion solo es de 1 o 0 ")
 longitud = int(input('Que longitud es tu pass?'))
 maysuculas = int(input('Que tenga mayusculas?'))
 signos = int(input('Que tenga signos?'))
 num = int(input('Que tenga numeros?'))
 pas = ''
 
-print(longitud)
-print(maysuculas)
-print(signos)
-print(num)
+#print(longitud)
+#print(maysuculas)
+#print(signos)
+#print(num)
 
 
 if maysuculas == 1:
-    print("este print si sirve LOL")
+    if signos == 1:
+        if num == 1:
+            alfabeto = letras_min + letas_mayus + especiales + numeros
+            pas = pas.join([choice(alfabeto) for i in range(longitud)])
+            print("opcion 1")
+            contrasena = pas
+            print(pas)
+        else:
+            print("opcion 2")
+    else:
+        print("opcion 3")
+else:
+    print("opcion 4")
 
-
-if maysuculas == 1:
-    alfabeto = letras_min + letas_mayus + especiales + numeros
-    pas = pas.join([choice(alfabeto) for i in range(longitud)])
-    print("opcion 1")
-    contrasena = pas
-    print(pas)
-if maysuculas == 0 and signos == 1 and numeros == 1:
-    alfabeto = letras_min + numeros + especiales
-    pas = pas.join([choice(alfabeto) for i in range(longitud)])
-    contrasena = pas
-    print(contrasena)
-if maysuculas == 0 and signos == 0 and numeros == 1:
-    alfabeto = letras_min + numeros
-    pas = pas.join([choice(alfabeto) for i in range(longitud)])
-    contrasena = pas
-    print(contrasena)
-if maysuculas == 0 and signos == 0 and numeros == 0:
-    alfabeto = letras_min
-    pas = pas.join([choice(alfabeto) for i in range(longitud)])
-    contrasena = pas
-    print(contrasena)
-if maysuculas == 1 and signos == 0 and numeros == 0:
-    alfabeto = letras_min + letas_mayus
-    pas = pas.join([choice(alfabeto) for i in range(longitud)])
-    contrasena = pas
-    print(contrasena)
-if maysuculas == 1 and signos == 1 and numeros == 0:
-    alfabeto = letras_min + letas_mayus + signos
-    pas = pas.join([choice(alfabeto) for i in range(longitud)])
-    contrasena = pas
-    print(contrasena)
