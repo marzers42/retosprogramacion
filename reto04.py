@@ -54,4 +54,4 @@ numelizer(25)
 
 num_primos(25)
 
-num_fibonacci(25)
+num_fibonacci(3)
